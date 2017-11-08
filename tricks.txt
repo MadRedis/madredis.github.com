@@ -1,0 +1,94 @@
+https://www.youtube.com/watch?v=yZfhqw754Xc
+https://everythingfonts.com/font-face
+Вертикальное центрирование (:before)
+помещаем в родителя псевдоэлемент и вытягиваем этот элемент на всю высоту
+Пример:
+<div class="parent">
+	<div class="child">
+		<h1>любой контент</h1>
+		<h2>любые стили</h2>
+	</div>
+</div>
+.parent {
+	height: 100vh;
+	&:before {
+		content:'';
+		display: inline-block;
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+.child {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+Вертикальное центрирование (position: absolute)
+Пример:
+<div class="parent">
+	<div class="child">
+		<h1>Любой контент</h1>
+		<h2>Любые стили</h2>
+	</div>
+</div>
+.parent {
+	height: 100vh;
+	position: relative;
+}
+.child {
+	position: absolute;
+	top: 50%;
+	height: 100px;
+	margin-top: -50px;
+}
+Проблема этого варианта в необходимости задавать высоту жестко дочернему элементу.
+
+Вертикальное центрирование (table-cell)
+Пример:
+<div class="parent-table">
+	<div class="parent">
+		<div class="child">
+			<h1>Любой контент</h1>
+			<h2>Любые стили</h2>
+		</div>
+	</div>
+</div>
+.parent-table {
+	display: table;
+	width: 100%
+}
+.parent {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+.child {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

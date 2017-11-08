@@ -1,0 +1,47 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite--icon-login {
+    width: 18px;
+    height: 16px;
+    background-position: -40px -40px;
+}
+
+.sprite-f {
+    width: 12px;
+    height: 22px;
+    background-position: -40px -136px;
+}
+
+.sprite-fB {
+    width: 12px;
+    height: 22px;
+    background-position: -40px -238px;
+}
+
+.sprite-pho {
+    width: 21px;
+    height: 21px;
+    background-position: -40px -340px;
+}
+
+.sprite-phoB {
+    width: 21px;
+    height: 21px;
+    background-position: -40px -441px;
+}
+
+.sprite-vk {
+    width: 25px;
+    height: 16px;
+    background-position: -40px -542px;
+}
+
+.sprite-vkB {
+    width: 25px;
+    height: 16px;
+    background-position: -40px -638px;
+}

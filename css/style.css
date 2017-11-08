@@ -1,0 +1,1160 @@
+/*=====================    ШРИФТЫ    ===================*/
+@font-face {
+    font-family: 'PT_SansNarrowWebBold';
+    src: url('..//fonts/PT_SansNarrowWebBold.eot');
+    src: url('..//fonts/PT_SansNarrowWebBold.eot') format('embedded-opentype'),
+         url('..//fonts/PT_SansNarrowWebBold.woff2') format('woff2'),
+         url('..//fonts/PT_SansNarrowWebBold.woff') format('woff'),
+         url('..//fonts/PT_SansNarrowWebBold.ttf') format('truetype'),
+         url('..//fonts/PT_SansNarrowWebBold.svg#PT_SansNarrowWebBold') format('svg');
+}
+
+@font-face {
+    font-family: 'PT_SansNarrowWebRegular';
+    src: url('..//fonts/PT_SansNarrowWebRegular.eot');
+    src: url('..//fonts/PT_SansNarrowWebRegular.eot') format('embedded-opentype'),
+         url('..//fonts/PT_SansNarrowWebRegular.woff2') format('woff2'),
+         url('..//fonts/PT_SansNarrowWebRegular.woff') format('woff'),
+         url('..//fonts/PT_SansNarrowWebRegular.ttf') format('truetype'),
+         url('..//f..//onts/PT_SansNarrowWebRegular.svg#PT_SansNarrowWebRegular') format('svg');
+}
+/*Для удобства можно упростить дальнейшее включение шрифтов
+.bold {
+	font-family: 'PT_SansNarrowWebBold';
+}	
+.reg {
+	font-family: 'PT_SansNarrowWebRegular';
+}
+*/
+
+/*===================== Остальное ======================*/
+
+html,
+body {
+	min-width: 960px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT_SansNarrowWebBold", "Arial", sans-serif;
+	text-transform: uppercase;
+	background: #000000 url("../img/body-bg.png") no-repeat center top;
+	color: #ffffff;
+	/*bakcground-size: cover необходимо для того, чтобы фоновая картинка 
+	растягивалась, если монитор пользователя имеет большее разрешение, чем 
+	разрешение картинки, разные варианты написания для разных устаревших 
+	браузеров*/
+	-webkit-background-size: cover;
+		 -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+/*Как защититься от дурака, когда дело касается, 
+например, картинок товаров в интернет-магазине*/
+.img {
+	max-width: 100%;
+	height: auto;
+}
+/*max-width: 100% - запрещает картинкам вылезать за границы
+своего целевого блока, не происходит переполнения.
+height: auto уменьшает картинку с сохранением пропорций
+этот код можно вставлять в начало практически любых 
+проектов.
+*/
+
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.main-header {
+	margin-bottom: 60px;
+
+	color: #ffffff;
+
+	background-color: #000000;
+}
+
+.main-navigation {
+	width: 780px;
+	float: left;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0; /* убираем отступы между словами, но в li надо задать размер текста */
+}
+
+.main-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.main-navigation a {
+	display: block; /* задается чтобы padding сработали, без этого они не будут работать */
+	padding: 25px 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.main-navigation a:hover {
+	background: #242424;
+}
+
+.user-block {
+	max-width: 140px;
+	float: right;
+}
+
+.login {
+	position: relative;
+
+	display: inline-block;
+	padding: 25px 20px;
+	padding-left: 50px;
+
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+.login:hover {
+	background-color: #242424;
+}
+
+.login::before {
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	width: 18px;
+	height: 16px;
+
+	background: url("../img/spritesheet.png") no-repeat;
+	background-position: -40px -40px;
+	opacity: 0.3; /* для затемнения стрелки */
+}
+
+.login:hover::before {
+	opacity: 1; /* при наведении стрелка светлеет */
+}
+ 
+.index-logo {
+	height: 204px;
+	width: 368px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.index-logo img {
+	width: 368px;
+	height: 204px;
+}
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-item {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.features-item:last-child {
+	margin-right: 0;
+}
+
+.features-name {
+	position: relative; /*очень важно для того, чтобы нарисовать ромбы, иначе ромбы будут позиционироваться от боди*/
+	display: block; /*по умолчанию тег b строчный, поэтому надо его превратить в блочный */
+	font-size: 30px;
+	line-height: 42px;
+	margin-bottom: 30px; /*здесь сразу падинг и маргин нужны для того, чтобы положение ромба всегда было на одинаковом расстоянии от верхней и нижней надписей, даже если например в верхней надписи добавить строки*/
+	padding-bottom: 35px; 
+}	
+
+.features-item p {
+	margin: 10px;
+	margin-bottom: 0;
+}
+
+.features-name::after { /*рисуем ромбики */
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+
+	background-color: #ffffff;
+	transform: rotate(45deg);
+}
+
+.index-content {
+	padding: 50px 80px;
+	margin-bottom: 35px;
+	color: #000000;
+	background: url("../img/index-content-shadow.png") no-repeat center, 
+	#f8f5f2 url("../img/pattern-white.jpg");
+}
+
+.index-content-left {
+	float: left;
+	width: 380px;
+}
+
+.index-content-right {
+	float: right;
+	width: 300px;
+}
+
+.index-content-title {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.index-content p {
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+.news-preview {
+	margin: 0;
+	padding: 0;
+	padding-right: 70px; /*в видео почему-то поставили 35 */
+	list-style: none;
+}
+
+.news-preview li {
+	margin-bottom: 25px;
+}
+
+.news-preview p {
+	margin-bottom: 0;
+}
+
+.news-preview time {
+	text-transform: none;
+	font-weight: 400;
+}
+
+.btn {
+	display: inline-block; /*блок не подходит так как некоторые кнопки стоят на одной строке рядом друг с другом */
+	margin-right: 16px;
+	padding: 10px 0; /*в видео другой вариант: 
+	padding: 10px 33px; 
+	width не выставлен, все кнопки отличаются размерами по ширине*/
+	width: 140px; 
+	text-align: center;
+	vertical-align: top;
+	/*текстовые параметры не наследуются кнопками поэтому их надо прописать для кнопок еще раз*/
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT_SansNarrowWebBold", "Arial"
+	, sans-serif;
+
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	background-color: #000000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+	background-color: #000000;
+}
+
+.gallery {
+	position: relative;
+	height: 260px;
+}
+
+.gallery-content {
+	height: 164px;
+	margin: 0;
+
+	/*рамка, а серый фон на случай если фото не загрузилось*/
+	background-color: #cccccc;
+	border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+	width: 286px;
+	height: 164px;
+}
+
+.gallery .btn {
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+}
+
+.gallery-prev {
+	left: 0;
+}
+
+.gallery-next {
+	right: 0;
+}
+
+.appointment-form input {
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT_SansNarrowWebBold", "Arial",
+	sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+	/*еще один вариант, как прописать характеристики текста, наследование от родителя
+	font: inherit;
+	color: inherit;
+	text-transform: inherit;*/
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	outline: none;
+
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 106px;
+	padding: 7px 15px;/*ширина общая ширина кнопки 140, паддинг 15 слева и справа это 30, плюс рамки слева и справа по 2 это 4, то есть вместе 34, поэтому ширина прописана 106, а не 140 */
+}
+
+.appointment-form input:focus {
+	border: 2px solid #663d15;
+}
+
+.appointment-form input:nth-child(2n) {
+	margin-right: 0;
+}
+
+.appointment-form .btn {
+	clear: both;
+	width: 100%;
+}
+
+.main-footer {
+	margin-top: 65px;
+	padding-top: 60px;
+	padding-top: 40px;
+
+	color: #ffffff;
+	background: #252525 url("../img/pattern-black.jpg");
+}
+
+.footer-contacts {
+	float: left;
+	width: 320px;
+	margin-right: 60px;
+	margin-top: -14px;
+}
+
+.footer-contacts a {
+	color: #ffffff;
+}
+
+.footer-contacts a:hover {
+	text-decoration: none;
+}
+
+.footer-social {
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+
+.footer-copyright {
+	float: right;
+	max-width: 180px;
+}
+
+.footer-copyright p {
+	margin: 0;
+	margin-bottom: 15px;
+
+	text-align: center;
+}
+
+.footer-copyright .btn {
+	margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.footer-social p {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.social-btn {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	margin: 0 2px;
+
+	/*прячем текст*/
+	font-size: 0;
+	vertical-align: top;
+	text-decoration: none;
+
+	background: #000000 url("../img/spritesheet.png") no-repeat center;
+	
+	/*эффект анимации*/
+	transition: 
+		background-position 0.5s,
+		background-color 0.5s;
+}
+
+.social-btn:hover {
+	background-color: #ffffff;
+}
+
+.social-btn-vk {
+	background-position: -32px -529px;
+}
+
+.social-btn-fb {
+	background-position: -25px -126px;
+}
+
+.social-btn-inst {
+	background-position: -29px -329px;
+}
+
+.social-btn-vk:hover {
+	background-position: -32px -625px;
+}
+
+.social-btn-fb:hover {
+	background-position: -25px -228px;
+}
+
+.social-btn-inst:hover {
+	background-position: -29px -430px;
+}
+
+
+/*---------------------------------------------------*/
+/*Общие стили для контентых тегов, внутренних страниц*/
+
+.inner-content {
+	margin-bottom: 75px;
+}
+
+.inner-content h2 {
+	/*при работе с текстом лучше задавать отступ сверху
+	и снизу, при этом нижний отступ должен быть меньше
+	это нужно для того, чтобы при добавлении текста
+	потом было заметно к какому заголовку относится
+	данный текст*/
+	margin-top: 60px;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.inner-content p {
+	/*если в макете расстояние между абзацами не указано
+	то стоит ставить маргин с размером равным высоте
+	строки или размеру шрифта абзаца*/
+	margin: 14px 0;
+}
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px;
+	border: 2px solid #000000;
+}
+
+/* ------------------- ITEM ------------------- */
+
+.images {
+	float: left;
+	width: 460px;
+	margin-right: 80px;
+}
+
+.image-active {
+	margin-bottom: 20px;
+	width: 460px;
+	height: 498px;
+	box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+}
+
+.image-preview {
+	float: left;
+	margin-right: 20px;
+	box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+}
+
+.image-preview:last-child {
+	margin-right: 0;
+}
+
+.item-description {
+	width: 390px;
+	float: right;
+	margin-left: 10px;
+}
+
+.item-details {
+	margin-bottom: 15px;
+}
+
+.available {
+	float: left;
+}
+.code {
+	float: right;
+	color: #aba9a7;
+	margin-right: 10px;
+}
+
+.item-price {
+	margin-top: 38px;
+	margin-bottom: 64px;
+	font-size: 0; 
+}
+
+.description-more {
+	font-size: 24px;
+}
+
+.description-extra {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 30px;
+}
+
+.description-extra li {
+	position: relative;
+	padding-left: 22px;
+}
+
+.description-extra li::before {
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: 4px;
+
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.cost {
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px 0;
+	width: 109px;
+	background-color: #e5e5e5;
+	text-align: center;
+  vertical-align: top;
+}
+
+.buy {
+	width: 78px;
+}
+
+
+/* -------------- ПРАЙС ---------------- */
+
+.inner-page {
+	color: #000000;
+	background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.inner-page .main-header {
+	margin-bottom: 55px; 
+}
+
+.main-navigation .logo-inner {
+	float: left;
+	width: 111px;
+	height: 20px;
+	padding-top: 22px;
+}
+
+.main-navigation .logo-inner img {
+	width: 111px;
+	height: 24px;
+}
+
+.main-navigation .logo-inner:hover {
+	background: none;
+}
+
+.main-navigation .active {
+	position: relative;
+	background-color: none;
+}
+
+.main-navigation .active a:hover {
+	background: none;
+}
+
+.main-navigation .active::after {
+	content: "";
+	position: absolute;
+	/*так как у элементов а стоит паддинг слева и справа
+	 по 20px мы можем использовать это значение, чтобы
+	 ужать подчеркивание ровно до размера элемента а,
+	 то есть текста*/
+	right: 20px;
+	bottom: 0;
+	left: 20px;
+
+	height: 5px;
+
+	background-color: #ffffff;
+}
+
+.main-navigation .active span {
+	display: block;
+	padding: 25px 20px;
+}
+
+.inner-page-title {
+	margin-bottom: 55px;
+}
+
+.inner-page-title h1 {
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 0;
+
+	font-size: 30px;
+	line-height: 37px;
+}
+
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumbs li {
+	/*позиция релатив тут нужна так как внутри ли
+	будет элемент с абсолютным позиционированием*/
+	position: relative;
+	display: inline;
+	padding-right: 40px;
+}
+
+.breadcrumbs li::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: 14px;
+
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.breadcrumbs a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumbs .current {
+	color: #aba9a7;
+}
+
+.breadcrumbs .current::after {
+	display: none;
+}
+
+
+
+.big-heading {
+	/*обертка для заголовка*/
+	margin-top: 55px;
+	margin-bottom: 65px;
+	text-align: center;
+}
+
+.big-heading h2 {
+	/*внутри обертки убираем отступы и добавляем паддинги
+	здесь относительная позиция нужная для того, чтобы
+	заголовок мог реагировать на z-index, без этого 
+	линия будет накладываться поверх текста*/
+	position: relative;
+	/*inline нужен для того, чтобы h2 был строчным и
+	ужимался под контент*/
+	display: inline-block;
+	margin: 0;
+	padding: 0 25px;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	z-index: 2;
+
+	background: #f8f3f0 url(../img/pattern-white.jpg) repeat;
+}
+
+.big-heading::after {
+	/*создаем подчеркивание, которое и будет нужной 
+	линией*/
+	content: "";
+	position: relative;
+	top: -25px;
+	z-index: 1;
+
+	display: block;
+	border-bottom: 2px solid #000000;
+}
+
+.custom-list-1 {
+	margin: 14px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.custom-list-1 li {
+	position: relative;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.prices-table {
+	width: 100%;
+}
+
+.prices-table td {
+	width: 50%;
+}
+
+.prices-table td:last-child {
+	text-align: center;
+}
+
+.inner-columns {
+	/*маргин сверху и снизу как у h2, чтобы верти-
+	кальный ритм не нарушался*/
+	margin: 60px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+	width: 460px;
+}
+
+.inner-column-left {
+	float: left;
+}
+
+.inner-column-right {
+	float: right;
+}
+
+/*обнуление маргина в колонках необходимо потому, что
+это флоатные элементы, а у флоатных элементов маргины
+не схлопываются и вместо этого просто плюсуются, 
+создавая огромные отступы сверху или снизу.*/
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+	/*каждый первый элемент внутри колонок*/
+	margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+	/*каждый последний элемент внутри колонок*/
+	margin-bottom: 0;
+}
+
+.short-text {
+	padding-right: 80px;
+}
+
+
+/* ---------------- SHOP ----------------- */
+.shop {
+	margin-bottom: -13px;
+}
+
+.vendor-select input[type="checkbox"] {
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT_SansNarrowWebBold", "Arial",
+	sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.inner-content .vendors {
+	margin-bottom: 26px;
+}
+
+.inner-content .goods-group {
+	margin-top: 47px;
+}
+
+.vendor-select label {
+	display: block;
+	position: relative;
+	margin-bottom: 13px;	
+	padding-left: 44px;
+	cursor: pointer;
+	max-width: 20%;	
+}
+
+.vendor-select input[type="checkbox"] {
+	display: none;
+}
+
+/*внутри лейбла и сразу после инпута*/
+.vendor-checkbox input[type="checkbox"] + 
+.checkbox-indicator {
+	/*рисование кастомного чекбокса*/
+	position: absolute;
+	top: 2px;
+	left: 0;
+
+	width: 17px;
+	height: 17px;
+
+	border: 2px solid #000000;
+}
+
+.vendor-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.vendor-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 1px;
+
+	width: 15px;
+	height: 2px;
+
+	background-color: #000000;
+}
+
+.vendor-checkbox input[type="checkbox"]:checked + 
+.checkbox-indicator::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.vendor-checkbox input[type="checkbox"]:checked + 
+.checkbox-indicator::after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* ---------------- ПОП-АП --------------- */
+.modal-content {
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	z-index: 30;
+
+	display: none;
+	width: 300px;
+	margin-left: -230px;
+	padding: 50px 80px;
+
+	color: #000000;
+	background: #f8f3f0 url("../img/pattern-white.jpg");
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+} 
+
+.modal-content-map {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -390px;
+	z-index: 20;
+
+	width: 766px;
+	height: 561px;
+	background: #e9e5dc url("../img/map.png");
+	border: 7px solid white;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/*важно правильно выставить z-index, чтобы оверлей
+	не перекрывал сам поп-ап.*/
+	z-index: 10;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-close {
+
+	position: absolute;
+	top: 0;
+	right: -34px;
+
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 2px;
+
+	width: 19px;
+	height: 3px;
+	background-color: #d0d0d0;
+	border-radius: 1px;
+}
+
+.modal-content-close::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+	margin: 0;
+	margin-bottom: 20px;
+
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	/*общая длинна поля 300px. задаем ширину 236,
+	внутренние отступы слева - 20, справа - 40, плюс
+	размер рамок 2, если сложить все вместе, то будут
+	необходимые 300px*/
+	width: 236px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	/*отступ справа нужен под картинку*/
+	padding-right: 40px;
+
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT_SansNarrowWebBold", "Arial",
+	sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	outline: none;
+}
+
+.login-form input:focus {
+	border-color: #663d15;
+}
+
+.login-form input.icon-user {
+	background-image: url("../img/spritesheet1.png");
+	background-repeat: no-repeat;
+	background-position: 114% -25px;
+}
+
+.login-form input.icon-password {
+	background-image: url("../img/spritesheet1.png");
+	background-repeat: no-repeat;
+	background-position: 114% -122px;
+}
+
+.login-form .restore {
+	float: right;
+	color: #000000; 
+}
+
+.login-form .btn {
+	width: 100%;
+	margin-top: 15px;
+}
+
+/*прячем настоящий чекбокс*/
+.login-checkbox input[type="checkbox"] {
+	display: none; 
+}
+
+/*делаем отступ для будущего кастомного чекбокса*/
+.login-checkbox {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.login-checkbox:hover {
+	color: #663d15;
+}
+
+/*внутри лейбла и сразу после инпута*/
+.login-checkbox input[type="checkbox"] + 
+.checkbox-indicator {
+	/*рисование кастомного чекбокса*/
+	position: absolute;
+	top: -2px;
+	left: 0;
+
+	width: 17px;
+	height: 17px;
+
+	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 1px;
+
+	width: 15px;
+	height: 2px;
+
+	background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + 
+.checkbox-indicator::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + 
+.checkbox-indicator::after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+@keyframes bounce {
+	0% { transform: translateY(-2000px); }
+	70% { transform: translateY(30px); }
+	90% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+	20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.modal-content-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+
+
